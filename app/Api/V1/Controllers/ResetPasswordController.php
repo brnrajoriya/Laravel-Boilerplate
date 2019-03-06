@@ -3,12 +3,13 @@
 namespace App\Api\V1\Controllers;
 
 use Config;
-use App\User;
+use App\Models\User;
 use Tymon\JWTAuth\JWTAuth;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Password;
 use App\Api\V1\Requests\ResetPasswordRequest;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Auth;
 
 class ResetPasswordController extends Controller
 {
@@ -34,7 +35,9 @@ class ResetPasswordController extends Controller
 
         return response()->json([
             'status' => 'ok',
-            'token' => $JWTAuth->fromUser($user)
+            'token' => $JWTAuth->fromUser($user),
+	    'user' => Auth::user(),
+            'expires_in' => Auth::guard()->factory()->getTTL() * 60
         ]);
     }
 

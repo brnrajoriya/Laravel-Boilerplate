@@ -9,7 +9,10 @@ class LoginRequest extends FormRequest
 {
     public function rules()
     {
-        return Config::get('boilerplate.login.validation_rules');
+        return [
+            'username' => 'required',
+            'password' => 'required'
+        ];
     }
 
     public function authorize()

@@ -8,7 +8,12 @@ It is built on top of three big guys:
 
 * JWT-Auth - [tymondesigns/jwt-auth](https://github.com/tymondesigns/jwt-auth)
 * Dingo API - [dingo/api](https://github.com/dingo/api)
-* Laravel-CORS [barryvdh/laravel-cors](http://github.com/barryvdh/laravel-cors)
+* Laravel-CORS - [barryvdh/laravel-cors](http://github.com/barryvdh/laravel-cors)
+* Eloquent File Field - [jaysson/eloquent_filefield](https://github.com/jaysson/eloquent_filefield)
+* Laravel MySQL Spatial extension - [grimzy/laravel-mysql-spatial](https://github.com/grimzy/laravel-mysql-spatial)
+* Laravel API Documentation Generator - [mpociot/laravel-apidoc-generator](https://github.com/mpociot/laravel-apidoc-generator)
+* Associate users with permissions and roles - [spatie/laravel-permission](https://github.com/spatie/laravel-permission)
+* Eloquent-Sluggable - [cviebrock/eloquent-sluggable](https://github.com/cviebrock/eloquent-sluggable)
 
 What I made is really simple: an integration of these three packages and a setup of some authentication and credentials recovery methods.
 

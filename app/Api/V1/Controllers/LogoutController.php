@@ -26,7 +26,6 @@ class LogoutController extends Controller
     {
         Auth::guard()->logout();
 
-        return response()
-            ->json(['message' => 'Successfully logged out']);
+        return response()->json(['message' => 'Successfully logged out', 'title' => 'Logged Out !']);
     }
 }

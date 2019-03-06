@@ -9,7 +9,11 @@ class ResetPasswordRequest extends FormRequest
 {
     public function rules()
     {
-        return Config::get('boilerplate.reset_password.validation_rules');
+        return [
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|confirmed'
+        ];
     }
 
     public function authorize()

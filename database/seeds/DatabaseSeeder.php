@@ -28,5 +28,7 @@ class DatabaseSeeder extends Seeder
         foreach ($users as $key => $user) {
             $u = User::create($user);
         }
+
+        $this->call(BrandSeeder::class);
     }
 }

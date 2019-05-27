@@ -30,4 +30,9 @@ $api->version('v1', function (Router $api) {
         // User Management 
         $api->resource('users', 'App\\Api\\V1\\Controllers\\Admin\\UserController');
     });
+
+    $api->group(['middleware' => 'bindings'], function(Router $api) {
+        $api->resource('brands', 'App\\Api\\V1\\Controllers\\BrandController');
+        $api->resource('vehicles', 'App\\Api\\V1\\Controllers\\VehicleController');
+    });
 });
